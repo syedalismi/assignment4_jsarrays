@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head> <title> Array assignment chp 14 to chap 17 </title>
+</head>
+<body>
+<script>
+// 1. Declare an empty array using JS literal notation to store 
+// student names in future
+
+// answer
+// var firstName=[];
+//2. Declare an empty array using JS object notation to store 
+//student names in future
+
+//var lastName= new Array();
+
+//3. Declare and initialize a strings array
+
+var flowerName=["tulip","rose","mascot"];
+document.write(flowerName[0]);
+document.write("<br/>");
+document.write(flowerName[1]);
+document.write("<br/>");
+document.write(flowerName[2]);
+document.write("<br/>");
+
+// 4. Declare and initialize a numbers array
+
+var primeNum=[1,2,3,5,7,11];
+document.write(primeNum[0]);
+document.write("<br/>");
+document.write(primeNum[1]);
+document.write("<br/>");
+document.write(primeNum[2]);
+document.write("<br/>");
+document.write(primeNum[3]);
+document.write("<br/>");
+document.write(primeNum[4]);
+document.write("<br/>");
+document.write(primeNum[5]);
+document.write("<br/>");
+
+// 5. Declare and initialize a boolean array
+
+var option=[true,false];
+document.write(option[0]);
+document.write("<br/>");
+document.write(option[1]);
+document.write("<br/>");
+
+//6. Declare and initialize a mixed array.
+//var mixArr["1","ahsan" ,"72" ,"2@3" ,"tulip"];
+//document.write(mixArr[0]);
+//document.write("<br/>");
+//document.write(mixArr[1]);
+//document.write("<br/>");
+//document.write(mixArr[2]);
+//document.write("<br/>");
+//document.write(mixArr[3]);
+//document.write("<br/>");
+//document.write(mixArr[4]);
+//document.write("<br/>");
+
+
+
+// 7. Declare and Initialize an array and store available mobile 
+//networks in Pakistan
+var mobNetwork=["jazz","ufone","warid","telenor","xong"];
+document.write(mobNetwork[0]);
+document.write("<br/>");
+document.write(mobNetwork[1]);
+document.write("<br/>");
+document.write(mobNetwork[2]);
+document.write("<br/>");
+document.write(mobNetwork[3]);
+document.write("<br/>");
+document.write(mobNetwork[4]);
+document.write("<br/>");
+
+//8. Declare and Initialize an array and store available education 
+// qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS, 
+ //M. Phil., PhD). Show the listed qualifications in your browser 
+// like
+
+var qualification=["SSC","HSC","BCS","BS","BCOM","MS","M.Phil","Phd"];
+document.write("<b>qualifications<b> <br/>");
+for(var loop=0;loop<qualification.length;loop++)
+{
+document.write( loop +1 + ")" +qualification[loop] +"<br/>");
+}
+
+//9. Declare and initialize an empty array to store top movies of 
+//2015. Add movies one by one in an array. Display the elements 
+//& length of array in your browser. (Use array’s length method)
+
+document.write("Top movies of 2015 <br/>")
+var movies=[];
+movies.push("Avengers : Age of ULtron");
+movies.push("Spectre");
+movies.push("Jurasic World");
+movies.push("Inside out");
+document.write("<h1> Top movies of 2015 </h1>");
+for (var loop=0;loop<movies.length;loop++)
+{
+document.write(loop+ 1 + ") " +movies[loop] +"<br/>");
+}
+
+document.write("<br /> <h2> length of the array: "+movies.length + "</h2>");
+
+// 10. Declare and Initialize an array with your favorite cars. Show 
+//a. First index of the array
+//b. Car at first index of the array
+//c. Last index of the array
+
+document.write("favourite cars <br/>");
+var favCars=["Audi","Volvo","Ford","Lamborghini"];
+document.write("First index of the array :0 <br/>");
+document.write("Last index of the array :3 <br/>");
+document.write("car at the first index of the array : "+favCars[3]);
+document.write("<br/>");
+
+//11. Write a program to store 3 student names in an array. Take 
+//another array to store score of these three students. Assume 
+//that total marks are 500 for each student, display the scores & 
+//percentages of students like
+var studentName=["Michael","John","Tonny"];
+var score=[320,230,480];
+
+for(var loop=0;loop<3;loop++)  {
+document.write("name of student is "  +studentName[loop] + " and score is " + score[loop] + " percentage is" +(score[loop]/500)*100 +"%" +"<br/>" );
+
+}
+
+//12. Initialize an array with color names. Display the array 
+//elements in your browser.
+//a. Ask the user what color he/she wants to add to the 
+//beginning & add that color to the beginning of the array. 
+//Display the updated array in your browser.
+//b. Ask the user what color he/she wants to add to the end & 
+//add that color to the end of the array. Display the updated 
+//array in your browser.
+//c. Add two more color to the beginning of the array. Display 
+//the updated array in your browser
+//d. Delete the first color in the array. Display the updated 
+//array in your browser.
+//e. Delete the last color in the array. Display the updated 
+//array in your browser.
+//f. Ask the user at which index he/she wants to add a color & 
+//color name. Then add the color to desired position/index. 
+//. Display the updated array in your browser.
+//g. Ask the user at which index he/she wants to delete 
+//color(s) & how many colors he/she wants to delete. Then 
+//remove the same number of color(s) from user-defined
+//position/index.  Display the updated array in your 
+//browser
+
+var colorNames=["pink","yellow","red","blue","red"];
+for (var iteration=0;iteration<colorNames.length;iteration++)  {
+document.write(colorNames[iteration] +"<br/>");
+}
+var begArr=prompt("please enter the color you want to add in the beginning of an array");
+colorNames.unshift(begArr);
+document.write("the updated array is after adding color in the beginning <br/> <hr>");
+for (var iteration=0;iteration<colorNames.length;iteration++)  {
+document.write(colorNames[iteration] +"<br/>");
+}
+var endArr=prompt("please enter the color you want to add in the end of an array ");
+colorNames.push(endArr);
+
+document.write("the updated array is after adding value in the end<br/> <hr>");
+for (var iteration=0;iteration<colorNames.length;iteration++)  {
+document.write(colorNames[iteration] +"<br/>");
+}
+
+document.write("adding two more colors in the beginning of an array <br/> <hr>");
+colorNames.unshift("cyan","magenta");
+
+document.write("the updated array is after adding two elements <br/> <hr>");
+for (var iteration=0;iteration<colorNames.length;iteration++)  {
+document.write(colorNames[iteration] +"<br/>");
+}
+colorNames.shift();
+document.write("the updated array after deletion is <br/> <hr>");
+for (var iteration=0;iteration<colorNames.length;iteration++)  {
+document.write(colorNames[iteration] +"<br/>");
+}
+
+// 13. Write a program to store student scores in an array & sort 
+// the array in ascending order using Array’s sort method.
+//var pet;
+//var score=[320,230,480,120];
+//for (var a=0;a<score.length ;a++) {
+//	for (var b=a+1;a<score.length;b++)    {
+//		if (score[a] > score[b])         {
+//				pet=score[b];
+//				score[b]=score[a];
+//				score[a]=pet;
+//					        }
+//				             }
+//				  }	
+//for (var a=0;a<score.length ;a++) {
+//document.write(score[a]);
+//}
+var score= [320,230,480,120];
+document.write("<br> score of students ");
+for (var i=0;i<score.length;i++) {
+document.write(score[i]+"<br/>");
+}
+
+document.write("<br/> sorted score of students is " +score.sort());
+
+//14. Write a program to sort the below mentioned array:
+//var fruits = [“strawberry”,“apple”,“orange”,“banana”];
+
+var fruits=["strawberry","apple","orange","banana"];
+document.write("Fruits list <br/>");
+document.write(fruits+"<br/>");
+document.write("Sorted fruit list <br/>");
+document.write(fruits.sort());
+
+//15. Write a program to initialize an array with city names. Copy 
+//3 array elements from cities array to selectedCities array. 
+
+var cities =["Karachi","lahore","islamabad","peshawar","sakkar"];
+var selectedCities=cities.slice(2,5);
+document.write("<br/> Cities list " +cities);
+document.write("<br/> selected cities list " + selectedCities);
+
+//16. Write a program to create a single string from the below 
+//mentioned array:
+//var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+//(Use array’s join method
+
+var singleString=["this","is","my","cat"];
+document.write("Array <br/>"+singleString);
+document.write("<br/> String " + singleString.join(""));
+
+// 17. Create a new array. Store values one by one in such a way 
+// that you can access the values in the order in which they were 
+// stored. (FIFO-First In First Out
+
+ var computerDevices = [];
+
+ computerDevices.push("keyboard");
+ computerDevices.push("mouse");
+ computerDevices.push("printer");
+ computerDevices.push("monitor");
+
+ document.write("<h2>Devices:<br />" + computerDevices + "</h2>");
+
+ for (var i = 0; i < computerDevices.length; i++){
+     document.write("<br/>Out:<br />" + computerDevices[i]);
+ }
+
+//18. Create a new array. Store values one by one in such a way 
+//that you can access the values in reverse order. (Last In-First 
+//Out
+
+ document.write("<h2>Devices:<br />" + computerDevices + "</h2>");
+
+ for (var i = computerDevices.length - 1; i >= 0; i--){
+     document.write("<br/>Out:<br />" + computerDevices[i]);
+ }
+
+
+// 20. Declare and initialize an empty multidimensional array.
+//(Array of arrays
+
+// var multiDimArray = [
+//     [,,,,],
+//     [,,,,],
+//     [,,,,]
+// ];
+
+
+
+//21. Declare and initialize a multidimensional array representing
+// the following matrix
+// var multiDimArray1 = [
+//     [0, 1, 2, 3],
+//     [1, 0, 1, 2],
+//     [2, 1, 0, 1]
+// ];
+
+// for (var i = 0; i < multiDimArray1.length; i++){
+//     document.write("<br /><br />" + multiDimArray1[i].join(" "));
+// }
+</script>
+</body>
+</html>
+
+
